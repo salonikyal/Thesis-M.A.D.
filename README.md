@@ -1,5 +1,5 @@
 # Thesis_M.A.D.
-Mobile Application Development - Analysis of Types and Tools
+Mobile Application Development - Analysis of Types and Tools<br>
 <b>Weather Watch</b><br>
 Student: Saloni Kyal<br>
 Professor: Prof. Elisabetta Di Nitto
