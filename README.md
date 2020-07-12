@@ -8,15 +8,15 @@ This is a thesis project, under the topic: Mobile Application Development- Analy
 
 Different types of mobile application is developed using 12 different platforms:
 
-Android Studio - Android app
-Eclipse - Android App
-IntelliJ - Android App
-Sencha Touch - Web App
-JQuery Mobile - Web App
-Angular - Progressive Web App
-React library - Progressive Web App
-Ionic - Hybrid App
-PhoneGap - Hybrid App
-React Native - Cross-Platform App
-Flutter - Cross-Platform App
-Xamarin - Cross-Platform App
+1. Android Studio - Android app<br>
+2. Eclipse - Android App<br>
+3. IntelliJ - Android App<br>
+4. Sencha Touch - Web App<br>
+5. JQuery Mobile - Web App<br>
+6. Angular - Progressive Web App<br>
+7. React library - Progressive Web App<br>
+8. Ionic - Hybrid App<br>
+9. PhoneGap - Hybrid App<br>
+10. React Native - Cross-Platform App<br>
+11. Flutter - Cross-Platform App<br>
+12. Xamarin - Cross-Platform App<br>
