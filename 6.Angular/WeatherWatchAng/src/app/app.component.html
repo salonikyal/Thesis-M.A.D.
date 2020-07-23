@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Weather Watch</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+			<div class="title">
+				<h1>Weather Watch</h1>
+			</div>
+			<form class="searchcity">
+			  <div >
+				<input class="city" type="text" placeholder="Enter a city..." [(ngModel)]="locationName" name="locationName">
+			  </div>
+			  <button type="submit" class="btn btn-primary" (click)="search()">SUBMIT</button>
+			</form>
+			<div class="location-and-date">
+				<h1 class="location-and-date__location">{{city}}</h1>
+				<div>{{date}}</div>
+			</div>
+			<div class="current-temperature">
+				<div class="current-temperature__icon-container">
+				  <img src="{{icon}}" class="current-temperature__icon" alt="">
+				</div>
+				<div class="current-temperature__content-container">
+				  <div class="current-temperature__value">{{temp}}</div>
+				  <div class="current-temperature__summary">{{des}}</div>
+				</div>
+			</div>
+			<div class="current-stats">
+				<div>
+				  <div class="current-stats__value">{{feels_like}}</div>
+				  <div class="current-stats__label">{{feels_like_label}}</div>
+				  <div class="current-stats__value">{{humidity}}</div>
+				  <div class="current-stats__label">{{humidity_label}}</div>
+				</div>
+				<div>
+				  <div class="current-stats__value">{{wind_speed}}</div>
+				  <div class="current-stats__label">{{wind_speed_label}}</div>
+				  <div class="current-stats__value">{{pressure}}</div>
+				  <div class="current-stats__label">{{pressure_label}}</div>
+				</div>
+				<div>
+				  <div class="current-stats__value">{{sunrise}}</div>
+				  <div class="current-stats__label">{{sunrise_label}}</div>
+				  <div class="current-stats__value">{{sunset}}</div>
+				  <div class="current-stats__label">{{sunset_label}}</div>
+				</div>
+			</div>
+			
+		
+	</body>
+</html>
