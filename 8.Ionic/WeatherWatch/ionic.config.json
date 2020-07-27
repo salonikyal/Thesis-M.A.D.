@@ -1,0 +1,7 @@
+{
+  "name": "WeatherWatch",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

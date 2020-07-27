@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar padding class="toolbarion">
+	<ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Weather Watch
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+  	<div class="location-and-date">
+		<h1 class="location-and-date__location">{{city}}</h1>
+		<div>{{date}}</div>
+	</div>
+	<div class="current-temperature">
+		<div class="current-temperature__icon-container">
+		  <img src="{{icon}}" class="current-temperature__icon" alt="icon" 
+		  onerror="src='../../assets/icon/icons/04n.png'"/>
+		</div>
+		<div class="current-temperature__content-container">
+		  <div class="current-temperature__value">{{temp}}</div>
+		  <div class="current-temperature__summary">{{des}}</div>
+		</div>
+	</div>
+	<div class="current-stats">
+		<div>
+			<div class="current-stats__value">{{feels_like}}</div>
+			<div class="current-stats__label">{{feels_like_label}}</div>		   
+			<div class="current-stats__value">{{wind_speed}}</div>
+			<div class="current-stats__label">{{wind_speed_label}}</div>
+			<div class="current-stats__value">{{pressure}}</div>
+			<div class="current-stats__label">{{pressure_label}}</div>
+			<div class="current-stats__value">{{sunrise}}</div>
+			<div class="current-stats__label">{{sunrise_label}}</div>
+		</div>
+		<div>
+			<div class="current-stats__value">{{humidity}}</div>
+			<div class="current-stats__label">{{humidity_label}}</div>
+			<div class="current-stats__value">{{wind_dir}}</div>
+			<div class="current-stats__label">{{wind_dir_label}}</div>
+			<div class="current-stats__value">{{cloud}}</div>
+			<div class="current-stats__label">{{cloud_label}}</div>			
+			<div class="current-stats__value">{{sunset}}</div>
+			<div class="current-stats__label">{{sunset_label}}</div>		  
+		</div>
+	</div>
+</ion-content>

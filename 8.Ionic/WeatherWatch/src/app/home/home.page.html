@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar padding class="toolbarion">
+    <ion-title>
+      Weather Watch
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+	<div id="container">
+		<form>
+		  <div>
+			<input class="city" type="text" placeholder="Enter a city..." [(ngModel)]="locationName" name="locationName">
+		  </div>
+		  <button type="submit" class="btn btn-primary" (click)="search()">SUBMIT</button>
+		</form>
+		<strong> OR </strong>
+		<div>
+		<button type="submit" class="btn btn-primary" (click)="getCurr()">Get Current Weather</button></div>
+	</div>
+</ion-content>

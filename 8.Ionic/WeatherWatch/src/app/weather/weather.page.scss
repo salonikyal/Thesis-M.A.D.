@@ -1,0 +1,85 @@
+ion-toolbar.toolbarion{
+	--background: #066B95 0 0/100% 100%;
+	--color: #ffffff;
+}
+
+ion-content.background{
+	--background: url(../../assets/2850815.jpg) 0 0/100% 100% no-repeat;	
+	--color: #ffffff;
+}
+
+
+/* location-and-date */
+.location-and-date {
+  width: 100%;  
+  margin-top:40px; 
+  margin-left: 30px;
+  margin-bottom:20px;
+}
+
+.location-and-date__location {
+  margin: 0;
+  font-size: 2em;
+  font-weight: 600;
+  
+}
+
+/* current-temperature */
+.current-temperature {
+  display: flex;
+  margin-top: 40px;
+  margin-left:20px;
+  margin-right:20px;  
+  background-color:rgba(6,107,149,0.4);
+  padding:1em;
+   
+}
+
+.current-temperature__icon-container {
+	width:50%;
+  text-align: center;
+}
+
+.current-temperature__content-container {
+  width:50%;
+  text-align: center;
+}
+
+.current-temperature__icon {
+  width: 4.5em;
+}
+
+.current-temperature__value {
+  font-size: 2.50em;
+  font-weight: 300;
+}
+
+.current-temperature__summary {
+  margin-top: 0.5em;
+  margin-bottom:10px;
+  text-align: center;
+  font-size: 1.125em;
+}
+
+
+/* current-stats */
+.current-stats {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1em;  
+  margin:20px;  
+  background-color:rgba(6,107,149,0.4);
+}
+
+.current-stats__value {
+  margin-top: 1em;
+  font-size: 1.44em;
+  font-weight: 200;
+}
+
+.current-stats__label {
+  color: white;
+  margin-bottom:1em;
+  
+}
+
