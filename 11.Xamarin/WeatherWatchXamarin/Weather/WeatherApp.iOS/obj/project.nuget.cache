@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "IbtpYP2gykSm430nRrPOKkQRNFM6xtet+WGmrhM+Yg9FOz3hME6EpoIvQP6wTfe5aV/I1ZbHsHsi+UbX8G97GA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Saloni.LAP\\Documents\\MSc\\Thesis\\Projects\\11.Xamarin\\WeatherWatchXamarin\\Weather\\WeatherApp.iOS\\WeatherApp.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Saloni.LAP\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\Saloni.LAP\\.nuget\\packages\\xamarin.forms\\4.7.0.968\\xamarin.forms.4.7.0.968.nupkg.sha512"
+  ],
+  "logs": []
+}
