@@ -1,0 +1,89 @@
+package com.example.eclipseweatherforecast;
+
+import java.util.ArrayList;
+
+import android.app.ActionBar;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+public class DateListActivity extends ActionBarActivity {
+	
+	private static String url;
+	private static final String key = "7255c3a0dab745748d9163037202806";
+	
+	private static final String objData = "data";
+	
+	private static final String objArrCurrentCond = "current_condition";
+	
+	private static final String doubleCurrentTemp = "temp_C";
+	private static final String intCode= "weatherCode";	
+	
+	private static final String objArrDes = "weatherDesc";
+	private static final String stringValue = "value";
+	
+	private static final String objArrWeather = "weather";
+	
+	private static final String stringDate = "date";
+	
+	private static final String objArrAstronomy = "astronomy";
+	private static final String stringSunrise = "sunrise";
+	private static final String stringSunset = "sunset";
+	
+	private static final String doubleMaxTemp = "maxtempC";
+	private static final String doubleMinTemp = "mintempC";
+	private static final String doubleAvgTemp = "avgtempC";
+	
+	final String degree = "\u00b0";
+	final String celsius = "C";
+	final String backslash = "\\";
+	
+	ArrayList<WeatherData> newForecast;
+	
+	ImageView icon;
+	TextView temp;
+	TextView maxMin;
+	TextView sunrise;
+	TextView sunset;
+	TextView desc;
+	ListView lstCustomView;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_date_list);
+		
+		temp = (TextView) findViewById(R.id.tv_current_temp_date);
+		maxMin = (TextView) findViewById(R.id.tv_current_temp_date);
+		sunrise = (TextView) findViewById(R.id.tv_current_temp_date);
+		sunset = (TextView) findViewById(R.id.tv_current_temp_date);
+		desc = (TextView) findViewById(R.id.tv_current_temp_date);
+		lstCustomView = (ListView) findViewById(R.id.list_view_date);
+		
+		Intent intent = getIntent();
+		final Bundle val = intent.getExtras();
+		String cityName = val.getString("citi");
+		
+		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+		actionBar.setTitle(cityName);
+		
+		url = "http://api.worldweatheronline.com/premium/v1/weather.ashx?"
+				+ "key="+ key +"&"
+				+ "q="+ cityName +"&"
+				+ "num_of_days=7&"
+				+ "format=json";
+		
+		//AllTask allTask = new AllTask();
+		//allTask.execute(url);
+		
+		
+	}
+
+	
+}

@@ -1,0 +1,70 @@
+package com.example.eclipseweatherforecast;
+
+import android.app.ActionBar;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+
+public class DateListActivity extends ActionBarActivity {
+	
+	private static String url;
+	private static final String key = "7255c3a0dab745748d9163037202806";
+	private static final String objData = "data";
+	
+	private static final String objArrCurrentCond = "current_condition";
+	
+	private static final String intTemp = "temp_C";
+	
+	private static final String objArrIcon = "weatherIconUrl";
+	private static final String objArrDes = "weatherDesc";
+	private static final String stringValue = "value";
+	
+	private static final String objArrWeather = "weather";
+	
+	private static final String stringDate = "date";
+	
+	private static final String objArrAstronomy = "astronomy";
+	private static final String stringSunrise = "sunrise";
+	private static final String stringSunset = "sunset";
+	
+	private static final String intMaxTemp = "maxtempC";
+	private static final String intMinTemp = "mintempC";
+	private static final String intAvgTemp = "avgtempC";
+	
+	
+	
+	
+	
+	
+	
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_date_list);
+		
+		Intent intent = getIntent();
+		final Bundle val = intent.getExtras();
+		String cityName = val.getString("citi");
+		
+		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+		actionBar.setTitle(cityName);
+		
+		url = "http://api.worldweatheronline.com/premium/v1/weather.ashx?"
+				+ "key="+ key +"&"
+				+ "q="+ cityName +"&"
+				+ "num_of_days=7&"
+				+ "format=json";
+		
+		AllTask allTask = new AllTask();
+		allTask.execute(url);
+		
+		
+	}
+
+	
+}

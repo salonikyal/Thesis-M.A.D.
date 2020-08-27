@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+<link rel="shortcut icon" type="image/png" href="favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Weather Watch</title>
+</head>
+
+<body>
+    <div class="container-fluid section-one">	
+        <div class="row">
+            <h1>Weather Watch</h1>
+            <div class="col-12 col-md-6 col-sm-12" id="two">                
+                <div class="form-group">
+                    <input type="text" class="form-control" id="city-input" placeholder="Enter a city name...">
+                    <button id="btn-choice" type="button" class="btn btn-primary btn-lg">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid section-two" id="winfo">
+        <div class="location-and-date">
+			<h1 class="location-and-date__location" id="city-info"></h1>
+		</div>
+		<div class="current-temperature">	
+			<div class="current-temperature__icon-container">
+			  <img id="iconw"  class="current-temperature__icon" alt="icon" 
+			  onerror="src='img/icons/unknown.png'"/>
+			</div>
+			<div class="current-temperature__content-container">
+			  <div class="current-temperature__value" id="temp-info"></div>
+			  <div class="current-temperature__summary" id="wheat-info"></div>
+			</div>
+		</div>  
+		<div class="current-stats">
+			<div>
+				<div class="current-stats__value" id="fl"></div>
+				<div class="current-stats__label">Feels Like</div>		   
+				<div class="current-stats__value" id = "ws"></div>
+				<div class="current-stats__label">Wind speed</div>
+				<div class="current-stats__value" id="pr"></div>
+				<div class="current-stats__label">Pressure</div>
+				
+			</div>
+			<div>
+				<div class="current-stats__value" id="hd"></div>
+				<div class="current-stats__label">Humidity</div>
+				<div class="current-stats__value"id="wd"></div>
+				<div class="current-stats__label">Wind Direction</div>
+				<div class="current-stats__value" id="cl"></div>
+				<div class="current-stats__label">Cloud</div>			
+				
+			</div>
+		</div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

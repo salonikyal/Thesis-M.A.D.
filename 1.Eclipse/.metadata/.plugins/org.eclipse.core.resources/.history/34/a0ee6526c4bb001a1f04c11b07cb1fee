@@ -1,0 +1,132 @@
+package com.example.eclipseweatherforecast;
+
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import android.app.ActionBar;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+public class DateListActivity extends ActionBarActivity {
+	
+	private static String url;
+	private static final String KEY = "7255c3a0dab745748d9163037202806";
+	
+	private static final String OBJ_DATA = "data";
+	
+	private static final String OBJ_ARR_CURR = "current_condition";
+	
+	private static final String INT_TEMP = "temp_C";
+	private static final String INT_CODE= "weatherCode";	
+	
+	private static final String OBJ_ARR_DES = "weatherDesc";
+	private static final String STRING_VALUE = "value";
+	
+	private static final String OBJ_ARR_WEATHER = "weather";
+	
+	private static final String STRING_DATE = "date";
+	
+	private static final String OBJ_ARR_ASTRONOMY = "astronomy";
+	private static final String STRING_SUNRISE = "sunrise";
+	private static final String STRING_SUNSET = "sunset";
+	
+	private static final String INT_MAX_TEMP = "maxtempC";
+	private static final String INT_MIN_TEMP = "mintempC";
+	private static final String INT_AVG_TEMP = "avgtempC";
+	
+	final String DERGREE = "\u00b0";
+	final String CELSIUS = "C";
+	final String BACKSLASH = "\\";
+	
+	ArrayList<WeatherData> newForecast;
+	JSONObject dataa = null;
+	JSONArray current = null;
+	JSONArray description = null;
+	JSONArray weathr = null;
+	
+	ImageView icon;
+	TextView temp;
+	TextView desc;
+	ListView lstCustomView;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_date_list);
+		
+		temp = (TextView) findViewById(R.id.tv_current_temp_date);
+		desc = (TextView) findViewById(R.id.tv_current_temp_date);
+		lstCustomView = (ListView) findViewById(R.id.list_view_date);
+		
+		Intent intent = getIntent();
+		final Bundle val = intent.getExtras();
+		String cityName = val.getString("citi");
+		
+		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+		actionBar.setTitle(cityName);
+		
+		url = "http://api.worldweatheronline.com/premium/v1/weather.ashx?"
+				+ "key="+ KEY +"&"
+				+ "q="+ cityName +"&"
+				+ "num_of_days=7&"
+				+ "format=json";
+		
+		//AllTask allTask = new AllTask();
+		//allTask.execute(url);
+		
+		
+	}
+	
+	class JSONTask extends AsyncTask<String,String,String>{
+
+		@Override
+		protected String doInBackground(String... arg0) {
+			// TODO Auto-generated method stub
+			
+			JSONParser jParser = new JSONParser();
+			JSONObject json = jParser.getJSONFromUrl(url);
+			
+			try{
+				dataa = json.getJSONObject(OBJ_DATA);
+				current = dataa.getJSONArray(OBJ_ARR_CURR);
+				JSONObject tempry = current.getJSONObject(0);
+				int curTmp = tempry.getInt(INT_TEMP);
+				int cod = tempry.getInt(INT_CODE);
+				
+				description = tempry.getJSONArray(OBJ_ARR_DES);
+				JSONObject v = description.getJSONObject(0);
+				String val = v.getString(STRING_VALUE);
+				
+				weathr = dataa.getJSONArray(OBJ_ARR_WEATHER);
+				JSONObject w = weathr.getJSONObject(0);
+				String dt = w.getString(STRING_DATE);
+				int mat = w.getInt(INT_MAX_TEMP);
+				int mit = w.getInt(INT_MIN_TEMP);
+				int avt = w.getInt(INT_AVG_TEMP);
+				
+				JSONArray astr = w.getJSONArray(OBJ_ARR_ASTRONOMY);
+				JSONObject ast = astr.getJSONObject(0);
+				String sr = ast.getString(STRING_SUNRISE);
+				String ss = ast.getString(STRING_SUNSET);
+				
+				
+			}
+			
+			
+			return null;
+		}
+		
+	}
+
+	
+}

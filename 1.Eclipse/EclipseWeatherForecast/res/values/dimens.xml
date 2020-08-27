@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <!-- General margin -->
+    <dimen name="margin_mini">2dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">12dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_big">40dp</dimen>
+    
+    
+    <!-- Check City activity margins and size-->
+	<dimen name="city_activity_horizontal_margin">24dp</dimen>
+	<dimen name="city_activity_vertical_margin">50dp</dimen>
+	
+	<dimen name="huge_text_size">46sp</dimen>
+	<dimen name="big_text_size">30sp</dimen>
+	<dimen name="text_size">24sp</dimen>
+	<dimen name="medium_text_size">18sp</dimen>
+	<dimen name="small_text_size">16sp</dimen>
+	<dimen name="mini_text_size">14sp</dimen>
+	
+	
+	<dimen name="form_box_height">60dp</dimen>	
+	<dimen name="climate_icon_size">54dp</dimen>
+	<dimen name="location_icon_size">20dp</dimen>
+	<dimen name="climate_icon_size_list">40dp</dimen>
+	
+	
+	
+	
+        
+</resources>

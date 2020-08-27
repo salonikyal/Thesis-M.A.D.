@@ -1,0 +1,337 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+	background: #1CACE6;
+}
+
+.container-fluid.section-one {
+    padding: 50px;
+    height: 35vh;
+}
+
+.container-fluid.section-two {
+    height: 65vh;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.row {
+    margin-top: 20px;
+}
+
+.col {
+    text-align: center;
+}
+
+.btn {
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 15px;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+#city-input {
+    width: 60%;
+    margin: auto;
+}
+
+.choice-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.city-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    min-height: 100vh;
+    z-index: -1;
+    min-width: 100%;
+}
+
+.container-fluid.section-two {
+    z-index: 1;
+}
+
+.container-fluid {
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+#city {
+    margin-bottom: 5px;
+}
+
+
+@media only screen and (min-width: 331px) {
+    @media only screen and (max-width: 650px) {
+        .container-fluid {
+            background: #1CACE6;
+            z-index: 1;
+            color: white;
+            width: 100%;
+        }
+        .col {
+            margin-top: 10px;
+        }
+        #city {
+            margin-top: 5px;
+            margin-bottom: -10px;
+        }
+
+        #city-input {
+            margin-bottom: -10px;
+        }
+        .choice-text {
+            font-size: 0.9rem !important;
+            margin: -3px;
+        }
+        .city-name {
+            font-size: 0.9rem !important;
+        }
+
+        #myVideo {
+            position: absolute;
+            min-height: 100vh;
+            z-index: -1;
+            min-width: 100%;
+        }
+        h1 {
+            font-size: 1.5rem;
+            margin-top: -40px;
+        }
+        .form-group {
+            margin-top: 10px;
+        }
+        #two {
+            margin-top: 20px;
+        }
+        #wheater-info {
+            font-size: 0.9rem;
+        }
+        .table td,
+        .table th {
+            padding: .15rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .container-fluid {
+        background: #1CACE6;
+        z-index: 1;
+        color: white;
+        width: 100%;
+    }
+    .col {
+        margin-top: 2px;
+    }
+    #city {
+        margin-top: 5px;
+        margin-bottom: -20px;
+    }
+
+    #city-input {
+        margin-bottom: -10px;
+    }
+    .choice-text {
+        font-size: 0.7rem !important;
+        margin: -3px;
+    }
+    .city-name {
+        font-size: 0.7rem !important;
+    }
+
+    #myVideo {
+        position: absolute;
+        min-height: 100vh;
+        z-index: -1;
+        min-width: 100%;
+    }
+    h1 {
+        margin-top: -40px;
+        font-size: 1.2rem;
+    }
+    .form-group {
+        margin-top: 10px;
+    }
+    #two {
+        margin-top: 20px;
+    }
+    #wheater-info {
+        font-size: 0.7rem;
+    }
+    .table td,
+    .table th {
+        padding: .15rem;
+    }
+    .btn {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+#wheater-info {
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    right: 15%;
+    width: 70%;
+    font-weight: 600;
+    display: none;
+}
+
+.location-and-date {
+  width: 100%;  
+  margin-bottom:20px;
+}
+
+.location-and-date__location {
+  margin: 0;
+  font-size: 2em;
+  font-weight: 600;
+  
+}
+
+/* current-temperature */
+.current-temperature {
+  display: flex;
+  margin-top: 40px;
+  margin-left:20px;
+  margin-right:20px;  
+  background-color:rgba(6,107,149,0.4);
+  padding:1em;
+   
+}
+
+.current-temperature__icon-container {
+	width:50%;
+  text-align: center;
+}
+
+.current-temperature__content-container {
+  width:50%;
+  text-align: center;
+}
+
+.current-temperature__icon {
+  width: 6em;
+}
+
+.current-temperature__value {
+  font-size: 1.50em;
+  font-weight: 300;
+}
+
+.current-temperature__summary {
+  margin-top: 0.5em;
+  margin-bottom:10px;
+  text-align: center;
+  font-size: 1.125em;
+}
+
+.current-stats {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1em;  
+  margin:20px;  
+  background-color:rgba(6,107,149,0.4);
+}
+
+.current-stats__value {
+  margin-top: 1.2em;
+  font-size: 1em;
+  font-weight: 200;
+}
+
+.current-stats__label {
+  color: white;
+  margin-bottom:0.8em;
+  
+}
+

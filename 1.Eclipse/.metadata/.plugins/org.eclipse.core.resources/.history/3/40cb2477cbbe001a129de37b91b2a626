@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Weather Watch</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_enter_city">EnterCityActivity</string>
+    <string name="degree">o</string>
+    <string name="celsius">C</string>
+    <string name="submit">SUBMIT</string>
+    <string name="title_activity_date_list">DateListActivity</string>
+
+</resources>
