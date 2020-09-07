@@ -22,7 +22,7 @@ import android.widget.Toast;
 public class DateListActivity extends Activity {
 	
 	private static String url;
-	private static final String KEY = "7255c3a0dab745748d9163037202806";
+	private static final String KEY = "api--key";
 	
 	private static final String OBJ_DATA = "data";
 	
