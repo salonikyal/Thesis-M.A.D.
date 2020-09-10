@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+	  
+	   <!-- Include the jQuery mobile stylesheet and libraries -->
+      <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+      <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	  
+	  
+
+	  <!-- Stylesheet CSS -->
+	  <link rel="stylesheet" type="text/css" href="css/weather.css">
+	  <style>
+.ui-block-a, .ui-block-b, .ui-block-c, .ui-block-d, .ui-block-e, .ui-block-f,.ui-block-g, .ui-block-h, .ui-block-i {
+    background-color: lightgray;
+    border: 1px solid black;
+    height: 100px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
+}
+</style>
+   </head>
+
+   <body>
+   
+      <div data-role = "page" id = "page2"  >
+	  <script type="text/javascript" src="js/weatherData.js"></script>
+		<div class="appname">
+			<img src="images/logo.png" alt="Logo" data-inline="true" width="40" height="40">
+			&nbsp &nbsp  <a href="page1.html" class="taphover" style="color:white">Weather Watch</a>
+		</div>
+         <div data-role = "main" class = "ui-content">	
+			<p style="color:white; font-size:2em ">
+			<ul id="weatherForecast" class="forecastFromAPI" data-role = "listview" data-inset = "true">            
+			</ul>
+        </div>
+      </div>
+	  
+   </body>
+</html>

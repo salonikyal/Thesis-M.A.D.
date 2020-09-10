@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+	  
+	   <!-- Include the jQuery mobile stylesheet and libraries -->
+      <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+      <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	  
+	  <script type="text/javascript" src="js/validation.js"></script>
+	  
+	  <!-- Stylesheet CSS -->
+	  <link rel="stylesheet" type="text/css" href="css/weather.css">
+   </head>
+
+   <body>
+      <div data-role = "page" id = "page1"  >
+		<div class="appname">
+			<img src="images/logo.png" alt="Logo" data-inline="true" width="40" height="40">
+			&nbsp &nbsp  Weather Watch
+		</div>
+         <div data-role = "main" class = "ui-content">
+			<form method = "get" action = "page2.html" onSubmit="checkCity()">
+				<div class="ui-field-contain">
+					<center><input id="city-name" type = "text" name = "city" placeholder="Enter a city name"></center>		   
+					<div align="right"><input id="btn-submit" type = "submit" value = "Submit" data-inline = "true" ></div>
+				</div>
+			</form>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,27 @@
+.ui-page {
+    background-image: url('../images/background.png') !important;
+    background-attachment: fixed; 
+	background-repeat: no-repeat; 
+	background-size: 100% 100%;"  
+}
+
+.ui-page .appname {
+    background: #066B95 !important;
+	color: #ffffff;
+	font-size: 1.5em;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ui-field-contain .ui-input-text {
+  margin: 20px;
+  padding: 8px;
+  border: 2px solid #066B95;
+  border-radius: 4px;  
+}
+
+
+
+
