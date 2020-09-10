@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Weather Watch Intellij</string>
+
+    <!--Demo texts-->
+    <string name="demo_time">8:20 pm</string>
+    <string name="demo_date">2020–10–20</string>
+    <string name="demo_day">Sunday</string>
+    <string name="demo_temp">25</string>
+    <string name="demo_temp_feels">Feels Like</string>
+    <string name="demo_humidity">Humidity:</string>
+    <string name="demo_loc">Bovisa, Milan</string>
+    <string name="demo_des">Sunny</string>
+
+    <string name="button_text">Enter a city:</string>
+    <string name="button_submit">Submit</string>
+
+    <string name="icon">Icon</string>
+    <string name="demo_max_min">25/32</string>
+    <string name="demo_sunset">Sunset: 6.30 pm</string>
+    <string name="demo_avg_temp">Average Temp: 20</string>
+    <string name="demo_sunrise">Sunrise: 8:20 am</string>
+
+</resources>

@@ -1,0 +1,2 @@
+rootProject.name='WeatherWatch'
+include ':app'
