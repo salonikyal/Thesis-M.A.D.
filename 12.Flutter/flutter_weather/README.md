@@ -15,3 +15,11 @@ A Flutter cross platform application to view current weather status.
 - :white_check_mark: Line graph to show temperature variance
 
 Tags: Flutter, Dart, Android Studio, openweatherAPI
+
+<b> Screenshots</b>
+<p float="left">
+<img src="../../Screenshot/flutter1.jpg" width="200">
+ <img src="../../Screenshot/flutter2.jpg" width="200">
+ <img src="../../Screenshot/flutter3.jpg" width="200">
+ <img src="../../Screenshot/flutter4.jpg" width="200">
+ </p>
