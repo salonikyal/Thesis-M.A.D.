@@ -9,9 +9,7 @@ Professor: Prof. Elisabetta Di Nitto
 <img src = "/Screenshot/applogo.png/" width="150">
   </p>
 
-Weather Watch is a mobile application which provides the weather details of the current location or a particular city using Open Weather Map API.
-
-A same reference application of 5 different types(web/pwa/native/hybrid/cross-platform) called Weather Watch is made using 12 tools/frameworks in order to analyze the application types and development tools. Following are the tools and the type of application developed using the tools:
+Weather Watch is a mobile application which provides the weather details of the current location or a particular city using Open Weather Map API. A same reference application of 5 different types(web/pwa/native/hybrid/cross-platform) called Weather Watch is made using 12 tools/frameworks in order to analyze the application types and development tools. Following are the tools and the type of application developed using the tools:
 
 1. Eclipse - Android App<br>
 2. Android Studio - Android app<br>
