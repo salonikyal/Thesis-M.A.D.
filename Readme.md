@@ -1,14 +1,13 @@
 # Thesis_M.A.D.
 Mobile Application Development - Analysis of Application Types and Tools<br>
+Masters Thesis Project<br>
 Student: Saloni Kyal<br>
 Professor: Prof. Elisabetta Di Nitto
 
 **Weather Watch**<br>
 <p align="center">
-<img src = "/Screenshot/applogo.png/" width="100">
+<img src = "/Screenshot/applogo.png/" width="150">
   </p>
-
-This is a thesis project, under the topic: Mobile Application Development- Analysis of Types and Tools.
 
 Weather Watch is a mobile application which provides the weather details of the current location or a particular city using Open Weather Map API.
 
