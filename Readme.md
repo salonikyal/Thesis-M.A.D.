@@ -4,7 +4,7 @@ Student: Saloni Kyal<br>
 Professor: Prof. Elisabetta Di Nitto
 
 **Weather Watch**<br>
-<img src = "/Screenshots/applogo.png/" width="100">
+<img src = "/Screenshot/applogo.png/" width="100">
 
 This is a thesis project, under the topic: Mobile Application Development- Analysis of Types and Tools.
 
